@@ -1,9 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1> culo </h1>
-<h1>{{ email }}</h1>
-<h1>{{ name }}</h1>
+<h1> Profile </h1>
+<h1>{{ object.email }}</h1>
+<h1>{{ object.name }}</h1>
+<h1>{{ object.lastName }}</h1>
+<h1>{{ object.birth }}</h1>
+<h1>{{ object.languages }}</h1>
+<h1>{{ object.description }}</h1>
 
 {% endblock %}
 
