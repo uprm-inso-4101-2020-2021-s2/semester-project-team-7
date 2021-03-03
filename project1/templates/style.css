@@ -1,0 +1,66 @@
+h1{
+    border: solid greenyellow;
+    width: 200px;
+    padding-left: 0px;
+    color: blue;
+    text-align: red;
+    font-style: italic;
+    font-family: sans-serif;
+}
+a{
+    color: orangered;
+    font-size: 20px;
+}
+
+p{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    color: rosybrown;
+    text-align: left;
+
+}
+h2{
+    text-align: right;
+    color: turquoise;
+}
+.Forums{
+    display: flex;
+    width: 500px;
+    color: firebrick;
+    
+}
+.forum{
+    border: solid;
+    height: 50px;
+    padding-right: 10px;
+    color: firebrick;
+    font-family: Arial, Helvetica, sans-serif;
+}
+em{
+     display: block;
+}
+input{
+    display: inline;
+}
+
+.profile{
+    border: solid;
+    width: 800px;
+
+}
+.user{
+    font-size: 50px;
+    padding-right: 40px;
+
+}
+.title{
+    color: sandybrown;
+}
+.NewProfile{
+    border: solid
+}
+.UserInfo{
+    color: blue;
+
+}
+

@@ -1,5 +1,31 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Home Page</h1>
+<link rel="stylesheet" href="style.css"/>
+<body style="background-color: rgb(48, 48, 48)">
+    <link rel="stylesheet"
+    href="style.css"/>
+    <h1>
+    Lingopathy
+    </h1>
+    <p>Forum for easy access to language teachers, native speakers
+    and students alike.
+    </p>
+<div class = "profile">
+    <a href="index.html">
+        <strong class = "user">Sign In</strong>
+    </a>
+    <a href="contact.html">
+        <strong class = "user">Create a profile</strong>
+    </a>
+</div>
+<h3 class = "title">Forums:</h3>
+<div class="Forums">
+<a href="#"><h3 class="forum">Espanol</h3></a>
+<a href="English.html"><h3 class="forum" >English</h3></a>
+<a href="#"><h3 class="forum">Japanese</h3></a>
+</div>
+
+
+</body>
 {% endblock %}
