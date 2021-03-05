@@ -1,57 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<body>
-<head><link rel="stylesheet" href="style.css"/></head>
 <h1>Contact</h1>
-<div class = "NewProfile">
-    <form action = "forms.py" method='get'>
-    <div class = "UserInfo">
-        <strong>Name:</strong>
-        <label for="fname">First name:</label>
-        <input type="text" id="fname" name="fname"><br><br>
-        <label for="lname">Last name:</label>
-        <input type="text" id="lname" name="lname"><br><br>
-    </div>
-
-    <div class = "UserInfo">
-        <strong >Username:</strong>
-        <input type="text" id="uname" name="fname"><br><br>
-    </div>
-
-    <div class = "UserInfo">
-        <strong >Password:</strong>
-        <input type="text" id="pname" name="fname"><br><br>
-    </div>
-
-    <div class = "UserInfo">
-        <strong >Email:</strong>
-        <input type="text" id="ename" name="fname"><br><br>
-    </div>
-
-    <div class = "UserInfo">
-        <strong >Fluent Languages:</strong>
-        <label for="english">English</label>
-        <input type="checkbox" id="english" name="fname"><br><br>
-        <label for="spanish">Spanish</label>
-        <input type="checkbox" id="spanish" name="spanish"><br><br>
-    </div>
-
-    <div class = "UserInfo">
-        <strong >Wanna Learn:</strong>
-        <label for="english">English</label>
-        <input type="checkbox" id="eng" name="fname"><br><br>
-        <label for="spanish">Spanish</label>
-        <input type="checkbox" id="spa" name="spanish"><br><br>
-    </div>
-
-    <div class = "UserInfo">
-        <strong >Birthday:</strong>
-        <input type="date" id="birth" name="fname"><br><br>
-    </div>
-
-    <input type='submit' value='save' />
-    </form>
-</div>
-</body>
-{% endblock %}
+<p>
+    {{ my_text }}, {{ my_number }}, {{ my_list }}
+</p>
+<ul>
+    <li>item1</li>
+    <li>item2</li>
+</ul>
+{% endblock content %}

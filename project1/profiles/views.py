@@ -1,3 +1,4 @@
+from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render
 
 from .models import profiles
@@ -16,6 +17,11 @@ def profile_create_view(request):
         'form': form
     }
     return render(request, "profiles/profile_create.html", context)
+
+
+def profile_sign_view(request):
+    form = UserCreationForm()
+    return render(request, 'profiles/sign.html', {'form': form})
 
 
 def profile_detail_view(request):
