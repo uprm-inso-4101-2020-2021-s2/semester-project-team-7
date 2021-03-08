@@ -1,22 +1,23 @@
 {% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<head xmlns="http://www.w3.org/1999/html"><link rel="stylesheet" href="{% static 'CSS/profile_style.css' %}"></head>
 <title>Language Learning Is Fun</title>
 
-{% block body %}
   <div class="container">
-    <h2>Sign-in</h2>
-        <div class = "UserInfo">
+      <div class = "UserInfo">
+          <h2>Sign-in</h2>
         <strong >Username:</strong>
         <input type="text" id="uname" name="fname"><br><br>
-    </div>
-       <div class = "UserInfo">
-        <strong >Password:</strong>
+          <strong >Password:</strong>
         <input type="text" id="pname" name="fname"><br><br>
-    </div>
-       <input type='submit' value='Sign-In' />
-        <a href="http://127.0.0.1:8000/">
-        <strong class = "user">Home</strong>
-    </a>
+      </div>
 
+      <div class = "UserInfo">
+        <input type='submit' value='Sign-In' />
+      </div>
   </div>
 
 {% endblock %}
