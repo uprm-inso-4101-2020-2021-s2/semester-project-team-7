@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 
 def home(request):
-    return render(request, "home.html", {})
+    return render(request, "pages/home.html", {})
 
 
 def about(request):
@@ -12,7 +12,7 @@ def about(request):
         "my_list": [1, 2, 3]
 
     }
-    return render(request, "about.html", my_context)
+    return render(request, "pages/about.html", my_context)
 
 
 def english(request):
@@ -22,7 +22,7 @@ def english(request):
         "my_list": [1, 2, 3]
 
     }
-    return render(request, "English.html", my_context)
+    return render(request, "pages/English.html", my_context)
 
 
 def spanish(request):
@@ -32,7 +32,7 @@ def spanish(request):
         "my_list": [1, 2, 3]
 
     }
-    return render(request, "spanish.html", my_context)
+    return render(request, "pages/spanish.html", my_context)
 
 
 def japanese(request):
@@ -42,8 +42,8 @@ def japanese(request):
         "my_list": [1, 2, 3]
 
     }
-    return render(request, "japanese.html", my_context)
+    return render(request, "pages/japanese.html", my_context)
 
 
 def contact(request):
-    return render(request, "contact.html", {})
+    return render(request, "pages/contact.html", {})

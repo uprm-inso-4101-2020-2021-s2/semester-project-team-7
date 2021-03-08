@@ -17,13 +17,14 @@ from Home import views
 from django.contrib import admin
 from django.urls import path
 from pages.views import home_view
-from profiles.views import profile_detail_view, profile_create_view, profile_sign_view
+from profiles.views import profile_detail_view, profile_create_view, profile_sign_view, signup
 from Home.views import english, spanish, japanese
 
 urlpatterns = [
 
     path('admin/', admin.site.urls),
     path('sign/', profile_sign_view, name='sign'),
+    path('signup/', signup, name='signup'),
     path('create/', profile_create_view),
     path('japanese/', japanese),
     path('english/', english),
