@@ -19,22 +19,21 @@
         </div>
 
     </li>
+    <li><a href="#">Contact</a></li>
 
-    <li><a href="#">Profile</a>
-        <div class="sub-menu2">
+ {% if user.is_authenticated %}
+<li><a href="{% url 'logout' %}">Logout</a></li>
+{% else %}
+<li><a href="{% url 'login' %}">Login</a></li>
+{% endif %}
 
-            <ul>
-                {% if user.is_authenticated %}
-                <li><a href="{% url 'logout' %}">Logout</a></li>
-                {% else %}
-                <li><a href="{% url 'login' %}">Login</a></li>
-                {% endif %}
-                <a href="signup"><strong class = "user">Sign-Up</strong></a>
-                <a href="profile"><strong class = "user">My Profile</strong></a>
-            </ul>
-        </div>
+        <li><a href="signup">
+        <strong class = "user">Sign-Up</strong>
+    </a></li>
+            <li><a href="profile">
+        <strong class = "user">My Profile</strong>
+    </a></li>
 
-        </li>
 
 </ul>
         	<div class="center">
