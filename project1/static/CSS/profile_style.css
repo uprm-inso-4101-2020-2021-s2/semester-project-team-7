@@ -1,0 +1,15 @@
+.NewProfile{
+    border: solid;
+
+}
+.container{
+    border:solid;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+}
+.UserInfo{
+    color: pink;
+}

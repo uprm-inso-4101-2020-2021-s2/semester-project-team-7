@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
+{% load static %}
+
 
 {% block content %}
+<head><link rel="stylesheet" href="{% static 'CSS/style.css' %}"></head>
 <body style="background-color: blue;">
-<head><link rel="stylesheet"
-    href="style.css"/></head>
 <h1>Japanese</h1>
 <input
  type="text"
