@@ -23,6 +23,9 @@
 
  {% if user.is_authenticated %}
 <li><a href="{% url 'logout' %}">Logout</a></li>
+                <li><a href="{% url 'profile' user.pk %}">
+        <strong class = "user">My Profile</strong>
+    </a></li>
 {% else %}
 <li><a href="{% url 'login' %}">Login</a></li>
 {% endif %}
@@ -30,9 +33,7 @@
         <li><a href="signup">
         <strong class = "user">Sign-Up</strong>
     </a></li>
-            <li><a href="profile">
-        <strong class = "user">My Profile</strong>
-    </a></li>
+
 
 
 </ul>

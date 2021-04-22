@@ -38,8 +38,8 @@ def signup(request):
     return render(request, 'pages/signup.html', {'user_form': User_form, 'profile_form': Profile_form})
 
 
-def profile_detail_view(request):
-    obj = profiles.objects.get(id=1)
+def profile_detail_view(request, pk):
+    obj = profiles.objects.get(pk=pk)
     # context = {
     #   'email': obj.email,
     #   'name': obj.name
