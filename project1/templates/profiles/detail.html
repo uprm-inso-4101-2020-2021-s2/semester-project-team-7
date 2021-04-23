@@ -1,14 +1,53 @@
 {% extends 'base.html' %}
+{% load static %}
+
 
 {% block content %}
-<h1> Profile </h1>
-<h1>{{ object.email }}</h1>
-<h1>{{ object.password }}</h1>
-<h1>{{ object.name }}</h1>
-<h1>{{ object.lastName }}</h1>
-<h1>{{ object.birth }}</h1>
-<h1>{{ object.languages }}</h1>
-<h1>{{ object.description }}</h1>
+<head><link rel="stylesheet" href="{% static 'CSS/myprofile.css' %}"></head>
+<body>
+<div class="menu-bar">
+<ul>
+    <li><a href="#">Forums</a>
+        <div class="sub-menu1">
 
+            <ul>
+                <li><a href="english">English</a> </li>
+                <li><a href="spanish/">Spanish</a> </li>
+                <li><a href="japanese/">Japanese</a> </li>
+            </ul>
+        </div>
+
+    </li>
+
+ {% if user.is_authenticated %}
+<li><a href="{% url 'logout' %}">Logout</a></li>
+{% else %}
+<li><a href="{% url 'login' %}">Login</a></li>
+{% endif %}
+    <li><a href="signup">
+        <strong class = "user">Sign-Up</strong>
+    </a></li>
+
+
+
+</ul>
+</div>
+<div class="content">
+    <div style="flex-grow:6">
+        <h2>About myself:</h2>
+        <p>{{ object.name }} {{ object.lastName }}</p>
+        <p>{{ object.birth }}</p>
+        <p>{{ object.languages }}</p>
+
+    </div>
+    <div style="flex-grow:2">
+        <p>{{ object.email }}</p>
+        <p>{{ object.description }}</p>
+        <p>{{ object.password }}</p>
+    </div>
+</div>
+
+
+</body>
 {% endblock %}
 

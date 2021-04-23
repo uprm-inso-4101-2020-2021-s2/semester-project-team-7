@@ -8,9 +8,13 @@ body{
 }
 
 h1, h3{
-  text-transform: uppercase;
-  font-weight: normal;
-  font-size: 80px;
+    background-image: url("/static/Images/Japanflag.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: normal;
+    font-size: 80px;
 }
 
 .forums{
@@ -52,8 +56,11 @@ h1, h3{
     position: absolute;
     top: 27px;
     left: 0;
-    background: url("/static/Images/Japanflag.png") 50% 0 no-repeat fixed;
-    background-size: contain;
+    background-color: rgba(80, 130, 215, 0.7);
+    /*background-image: url("/static/Images/Japanflag.png");
+    background-repeat: no-repeat;
+    background-position: left top;*/
+
     color: #DFDFDF;
 
     opacity:0;
