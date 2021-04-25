@@ -1,27 +1,29 @@
 {%  extends 'base.html' %}
 
+{% load static %}
+{% block stylesheet %}
+  <link rel="stylesheet" href="{% static 'CSS/signup.css' %}">
+{% endblock %}
 
 {% block body %}
-
-   <div class="container">
-
-    <div class="row justify-content-center">
-      <div class="col-lg-8 col-md-10 col-sm-12">
-        <div class="card">
-          <div class="card-body">
-            <h3 class="card-title">Sign up</h3>
-            <form method="post" novalidate>
+<body>
+   <div class="wrapper">
+     <div class="title">
+       Registration Form
+     </div>
+     <div class="form">
+         <form method="post" novalidate>
               {% csrf_token %}
               {{ user_form.as_p }}
                 {{ profile_form.as_p }}
-              <button type="submit" class="btn btn-primary btn-block">Create an account</button>
-            </form>
+
+              <input type="submit" name="" value="Create an account">
+             <div class="card-footer text-muted text-center">
+            Already have an account?
           </div>
-          <div class="card-footer text-muted text-center">
-            Already have an account? <a href="{% url 'login' %}">Log In</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+             <a href="{% url 'login' %}">Log In</a>
+         </form>
+     </div>
+   </div>
+</body>
 {% endblock %}
