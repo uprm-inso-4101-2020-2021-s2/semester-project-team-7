@@ -33,7 +33,7 @@ urlpatterns = [
     path('english/', english),
     path('spanish/', spanish),
 
-    path('forumPage/', forumPage, name="forumPage"),
+    path('forumPage/', forumPage),
     path('admin/', admin.site.urls),
     path('<slug:slug>/', post_detail, name='post_detail'),
 

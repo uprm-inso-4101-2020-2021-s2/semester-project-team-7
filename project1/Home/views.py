@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
 
-from blog.models import Post
+from blog.models import Post, PostEng
 from blog.forms import CommentForm
 
+from blogEng.models import Post_e
+from blogEng.forms import CommentForm_e
 
 
 def home(request):
@@ -27,7 +29,9 @@ def english(request):
 
     }
     return render(request, "pages/English.html", my_context)
-
+    # posts = Post_e.objects.all()
+    #
+    # return render(request, 'pages/english.html', {'posts': posts})
 
 def spanish(request):
     my_context = {
