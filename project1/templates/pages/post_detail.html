@@ -1,15 +1,39 @@
-{% extends "baseF.html" %}
+
 {% block content %}
+<style>
+    body{
+        background-color: grey;
+        background-image: linear-gradient(rgb(23, 157, 216), grey);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .post{
+        text-align:center;
+    }
+    .post > p{
+        font-size: 23px;
+        font-family: "Times New Roman", Times, serif;
+        margin: auto;
+        width: 50%;
+        border: solid blue;
+        border-style: inset;
+        padding: 10px;
+    }
+    .comments{}
+</style>
+<body>
+<div class="post">
     <h1 class="title">{{ post.title }}</h1>
 
-    <small>Posted at {{ post.date_added }}</small>
 
-    <p><strong>{{ post.intro }}</strong></p>
+    <em><strong>{{ post.intro }}</strong></em>
 
     <p>{{ post.body }}</p>
+</div>
+<br/>
 
     <hr>
-
+<div class="comments">
     <h2 class="subtitle">Comments</h2>
 
     {% for comment in post.comments.all %}
@@ -30,7 +54,6 @@
         </div>
     {% endfor %}
 
-    <hr>
 
     <h2 class="subtitle">Add comment</h2>
 
@@ -45,4 +68,7 @@
             </div>
         </div>
     </form>
+</div>
+<small>Posted at {{ post.date_added }}</small>
+</body>
 {% endblock %}
