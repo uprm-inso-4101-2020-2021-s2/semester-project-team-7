@@ -41,9 +41,9 @@ INSTALLED_APPS = [
     'profiles',
     'pages',
     'widget_tweaks',
-
-
-
+    'blog',
+    # 'Comment',
+    # 'Post',
 
 
 ]
