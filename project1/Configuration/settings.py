@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'pages',
     'widget_tweaks',
     'blog',
-    'blogEng',
+
 
 
 ]

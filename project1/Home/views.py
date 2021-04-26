@@ -3,8 +3,8 @@ from django.shortcuts import render, redirect
 from blog.models import Post, PostEng
 from blog.forms import CommentForm
 
-from blogEng.models import Post_e
-from blogEng.forms import CommentForm_e
+# from blogEng.models import Post_e
+# from blogEng.forms import CommentForm_e
 
 
 def home(request):
